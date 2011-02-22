@@ -1,0 +1,61 @@
+Flash/Ruby
+==========
+
+WARNING: This is not being actively maintained, but it was languishing
+         inaccessible to anyone else, thought I'd put it up.
+         It was last updated in 2005.
+
+Prerequisites for building
+--------------------------
+
+  * Ruby 1.8 or newer + headers
+  * libflash library 0.99.2 or newer + headers
+  * Ruby GTK2 bindings
+
+Build + Install
+---------------
+
+Flash/Ruby includes setup.rb for easy building and installation. To
+build and install in one step:
+
+  $ ruby setup.rb
+
+Building
+--------
+
+If you just want to build:
+
+  $ ruby setup.rb config
+  $ ruby setup.rb setup
+  
+Installing
+----------
+
+To install a previously built source tree:
+
+  $ ruby setup.rb install
+
+Using
+-----
+
+The bindings wrap the two GObject classes exported by the libflash library, namely
+FlashLibrary (representing a libflashplayer.so plugin file) and
+FlashFile (representing a .swf file).
+
+See the examples/ directory for some examples of usage.
+
+Documentation
+-------------
+
+RDoc coverage exists for all publically exposed API methods.
+To generate the documentation, run:
+
+	$ ./tools/genrdoc
+
+
+More
+----
+
+https://github.com/bitserf/flash-ruby
+
+Thanks!

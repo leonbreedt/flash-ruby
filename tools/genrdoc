@@ -1,0 +1,6 @@
+#!/bin/sh
+
+# ugly, but rdoc doesn't maintain state between .c files.
+cat ext/*.c >ruby-flash.c
+rdoc -t Flash/Ruby --line-numbers --inline-source -p -m Flash -x ext ruby-flash.c lib
+rm -f ruby-flash.c
